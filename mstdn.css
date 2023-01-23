@@ -1,0 +1,215 @@
+/*
+    * Shrink the font size a smidge for post content
+    * Indent the paragraph text
+    * Stop posts from getting too tall by capping content 
+      height, and adding scrollbar if exceeded
+        - 350px seems to be the sweet spot - maybe 90% of 
+          posts don't hit the height cap
+    * This alignment intentionally does not apply to
+      expanded posts.
+*/
+.status .reply-indicator__content, .status .status__content {
+    margin-left: calc(58px - 0.5em);
+    font-size: 1.075em;
+    padding: 0 0.5em;
+    max-height: 350px;
+    overflow-y: auto;
+}
+
+/*
+    * Narrow the media icon on status cards, so that the
+      card title aligns with post content
+*/
+.status-card.compact .status-card__image {
+    flex: 0 0 calc(58px - 0.75em);
+}
+
+/*
+    * Brighten the post privacy indicator a tad if public but
+      not listed in public timelines
+    * Set a bright color for privacy indicator if locked to
+      followers or specific recipients
+*/
+.status__visibility-icon .fa-lock, 
+.status__visibility-icon .fa-at {
+    color: #0f0;
+}
+.status__visibility-icon .fa-unlock {
+    color: #0f0;
+}
+
+/*
+    * Give avatar photos a fun rounded blob shape
+    * Profile page photos are still rounded squares
+*/
+.account__avatar {
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-top-left-radius: 70%;
+    border-top-right-radius: 70%;
+}
+.account__header__tabs .account__avatar {
+    border-radius: 4px;
+}
+
+.columns-area__panels__main {
+    border-left: solid #0f0;
+    border-right: solid #0f0;
+    margin-right: 1em;
+    margin-left: 1em;
+}
+
+@font-face {
+    font-family: "Syne Mono";
+    src: url("/SyneMono-Regular.ttf") format("woff2");
+    font-display: swap;
+}
+
+::placeholder {
+  color: #0f0 !important;
+  opacity: 0.8 !important;
+}
+
+body {
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale !important;
+}
+
+.logo {
+    display: none;
+}
+
+.ui {
+    font-family: 'Syne Mono';
+    background: url("/background-tileable.webp") !important;
+}
+
+.search__input {
+    color: #0f0 !important;
+    border: solid #0f0;
+}
+
+.compose-form {
+    border: solid #0f0;
+    padding: 0;
+    margin-bottom: 0 !important;
+}
+
+.compose-panel hr, .navigation-panel hr {
+    border-top: solid #0f0 !important;
+}
+
+.compose-form .compose-form__modifiers, .compose-panel
+.compose-form__autosuggest-wrapper, .link-footer p, i, .fa, svg, strong,
+.text-icon-button, textarea, input, .search__input, .compose-form
+.compose-form__buttons-wrapper, .column-back-button, .tabs-bar__wrapper,
+.account__header, .column>.scrollable, p, time, .character-counter, dd,
+.account__header__tabs__name h1 small, .empty-column-indicator,
+.follow_requests-unlocked_explanation, .detailed-status__action-bar, a,
+.column-header__collapsible-inner, dt {
+    background: transparent !important;
+    color: #0f0 !important;
+}
+
+.interaction-modal, .modal-root__modal, .dropdown-menu {
+    color: #0f0 !important;
+    border: solid #0f0;
+    background: url("/background-tileable.webp") !important;
+}
+
+.account__header__bio .account__header__fields,
+.confirmation-modal__action-bar, .regeneration-indicator {
+    border: solid #0f0;
+    color: #0f0;
+    background: transparent !important;
+}
+
+.account__section-headline a.active:after, .account__section-headline
+button.active:after, .notification__filter-bar a.active:after,
+.notification__filter-bar button.active:after {
+    bottom: -1px;
+    border-color: transparent transparent #0f0;
+}
+
+.account__section-headline, .notification__filter-bar, .load-gap {
+    background: transparent !important;
+    border-bottom: 1px solid #0f0 !important;
+    border: solid #0f0 !important;
+}
+
+.status, .status:focus-visible,
+.status__wrapper.status__wrapper-public.focusable, .detailed-status.detailed-status-public,
+.detailed-status__action-bar,
+.dismissable-banner, .dropdown-menu__separator {
+    border-bottom: 1px solid #0f0 !important;
+}
+
+.detailed-status__action-bar, .detailed-status__wrapper:focus,
+.focusable:focus, .load-more:hover, .dropdown-menu__container  {
+    background: transparent !important;
+}
+
+span {
+    color: #0f0;
+}
+
+.compose-form__publish-button-wrapper {
+    margin: auto;
+}
+
+.sign-in-banner a, .sign-in-banner a:hover, button.button--block,
+button.button--block:hover, button.logo-button:hover, button.logo-button,
+.button.button-secondary, .button.button-secondary:hover {
+    color: #0f0 !important;
+    background: transparent !important;
+    border: solid #0f0 !important;
+}
+
+.button.button--block *, button.logo-button *, .button.button-secondary *,
+.column-header__buttons .column-header__button, .column-header__buttons
+.column-header__button:hover, .dismissable-banner {
+    color: #0f0 !important;
+    background: transparent !important;
+}
+
+.button, .notification__filter-bar button, .column-header,
+.column-header__back-button, .column-inline-form {
+    background: transparent !important;
+    background-color: transparent !important;
+}
+
+button {
+    color: #0f0 !important;
+}
+
+.account__header__tabs__buttons button.icon-button, input[type="text"],
+.setting-text {
+    border: 1px solid #0f0 !important;
+}
+
+.emoji-mart-bar, .emoji-mart-search, .emoji-mart-scroll,
+.emoji-picker-dropdown__menu, .detailed-status.detailed-status-public,
+.detailed-status__action-bar {
+    background: transparent !important;
+}
+
+.emoji-mart-category-label span, .emoji-mart {
+    background: url("/background-tileable.webp") !important;
+}
+
+.emoji-mart {
+    border: solid #0f0;
+}
+
+.emoji-mart-anchor-bar {
+    background-color: #0f0;
+}
+
+.link-footer p a {
+    color: #0f0;
+    text-decoration: underline;
+}
+
+.dropdown-menu__arrow.bottom {
+    border-bottom-color: #0f0;
+}
